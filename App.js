@@ -1,0 +1,6 @@
+const server = require('express')()
+const mockRes = require('./mockResponse')
+const cors = require('cors')
+server.use(cors())
+server.get('/mockData', (req, res) => {res.json(mockRes)})
+server.listen(50000)
